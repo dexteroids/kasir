@@ -1,0 +1,62 @@
+
+
+body {
+    font-family: 'Poppin', sans-serif;
+    background-color: #7baffe;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.team{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    max-width: calc(33.333% - 40px);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #007BFF;
+}
+
+.info p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
