@@ -13,9 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link href="css/styles.css" rel="stylesheet" />
     <title>Kasir</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,12 +55,13 @@
             background-color: #575757;
         }
         .content {
-            margin-left: 210px;
+            margin-top: 50px;
+            /* margin-left: 210px; */
             padding: 20px;
         }
         .card {
-            background-color: #007bff;
-            color: white;
+            background-color: #ffffff;
+            color: black;
             padding: 20px;
             margin-bottom: 20px;
         }
@@ -70,6 +72,7 @@
             border: none;
             cursor: pointer;
             margin-right: 5px;
+            margin-bottom: 5px;
         }
         .btn-warning {
             background-color: #ffc107;
@@ -122,23 +125,49 @@
         }
     </style>
 </head>
-<body>
-    <div class="navbar">
-        <a href="index.php">Aplikasi Kasir</a>
-    </div>
-    <div class="sidebar">
-        <a href="index.php">Order</a>
-        <a href="stock.php">Stock Barang</a>
-        <a href="masuk.php">Barang Masuk</a>
-        <a href="index.php">Kelola Pelanggan</a>
-        <a href="logout.php">Logout</a>
-    </div>
+<body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand ps-3" href="index.php">Aplikasi Kasir</a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Menu</div>
+                            <a class="nav-link" href="index.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Order
+                            </a><a class="nav-link" href="stock.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Stock Barang
+                            </a>
+                            <a class="nav-link" href="masuk.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Barang Masuk
+                            </a>
+                            <a class="nav-link" href="index.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Kelola Pelanggan
+                            </a>
+                            <a class="nav-link" href="logout.php">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Kelompok Project Pemroweb:</div>
+                        Kelas G
+                    </div>
+                </nav>
+            </div>
     <div class="content">
         <h1>Stock Barang</h1>
         <p>Selamat Datang</p>
         <div class="card">Jumlah Barang: <?=$h2;?> </div>
         
-        <button class="btn" onclick="openModal('myModal')">Tambah Barang Baru</button>
+        <button class="btn btn-info mb-4 text-white mb-4" onclick="openModal('myModal')">Tambah Barang Baru</button>
 
         <div class="card">
             <h2>Data Barang</h2>
@@ -228,7 +257,9 @@
         </div>
     </div>
 
-    <script>
+    <script src="js/scripts.js">
+
+
         function openModal(id) {
             document.getElementById(id).style.display = "block";
         }

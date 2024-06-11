@@ -156,7 +156,7 @@ if(isset($_GET['idp'])){
                                                             <!-- Modal Footer -->
                                                             <div class="modal-footer">
                                                                 <button type="submit" class="btn btn-success" name="editdetailpesanan">Submit</button>
-                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-danger" onclick="closeModal('edit<?=$idpr;?>')">Close</button>
                                                             </div>
 
                                                         </form>
