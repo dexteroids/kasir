@@ -1,9 +1,9 @@
 <?php
     require 'ceklogin.php';
-
     //hitung jumlah pesanan
     $h1 = mysqli_query($c,"select*from pesanan");
     $h2 = mysqli_num_rows($h1); //jumlah pesanan
+    
 ?>
 
 <!DOCTYPE html>

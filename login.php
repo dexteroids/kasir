@@ -1,12 +1,6 @@
 <?php
 require 'function.php';
 
-if(!isset($_SESSION['login'])){
-    //done
-  }  else{
-
-    header('location:login.php');
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
